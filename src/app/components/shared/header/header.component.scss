@@ -1,0 +1,13 @@
+:host {
+  .header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 8px 24px;
+    height: 100%;
+
+    button { height: 32px; }
+  }
+}

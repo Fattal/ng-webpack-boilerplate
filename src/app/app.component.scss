@@ -1,0 +1,21 @@
+$panel-height: 104px;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - #{$panel-height});
+
+  app-header {
+    height: 64px;
+    max-height: 64px;
+  }
+
+  app-main {
+    flex: 0 0 100%;
+  }
+
+  app-footer {
+    height: 64px;
+    max-height: 64px;
+  }
+}

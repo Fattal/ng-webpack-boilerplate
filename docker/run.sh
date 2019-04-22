@@ -9,4 +9,4 @@ docker run --network host \
 -v ${DIR}/../.:/src \
 -u $(id -u) \
 ng-start \
- /bin/bash -c "ng serve"
+ /bin/bash -c "npm rebuild node-sass && ng serve"

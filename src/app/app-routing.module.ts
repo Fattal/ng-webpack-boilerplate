@@ -1,10 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import {MainComponent} from './components/main/main.component';
+import {NotFoundComponent} from './components/not-found/not-found.component';
+import {BrowserModule} from '@angular/platform-browser';
+
+const routes: Routes = [
+  { path: '', component: MainComponent},
+  { path: '**', component: NotFoundComponent}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes)
+  ],
+  declarations: [
+    MainComponent,
+    NotFoundComponent
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }
