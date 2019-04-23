@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+@import './theme-palette';
+
+@include mat-core();
+
+$test-theme-primary: mat-palette($custom-primary, 500);
+$test-theme-accept: mat-palette($custom-accept, 500);
+$test-theme-warn: mat-palette($mat-deep-orange);
+
+$custom-theme: mat-light-theme(
+    $test-theme-primary,
+    $test-theme-accept,
+    $test-theme-warn
+);
