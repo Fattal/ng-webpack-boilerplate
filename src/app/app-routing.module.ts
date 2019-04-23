@@ -7,6 +7,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 const routes: Routes = [
   { path: '', component: MainComponent},
+  { path: 'index', redirectTo: '/'},
   { path: '**', component: NotFoundComponent}
 ];
 

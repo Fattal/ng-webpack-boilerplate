@@ -15,7 +15,9 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          // "builder": "@angular-devkit/build-angular:browser",
+          /** use custom webpack prod builder */
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/ng-start",
             "index": "src/index.html",
@@ -31,6 +33,11 @@
               "src/styles.scss"
             ],
             "scripts": [],
+            /** custom webpack config */
+            "customWebpackConfig": {
+              "path": "./config/webpack.config.dev.js",
+              "replaceDuplicatePlugins": true
+            },
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -61,6 +68,7 @@
           }
         },
         "serve": {
+          /** for use webpack replace builder "@angular-devkit/build-angular:dev-server" to "@angular-builders/dev-server:generic" */
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "ng-start:build"
